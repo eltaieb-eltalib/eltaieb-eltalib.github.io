@@ -780,9 +780,153 @@
       .btn--bg { padding: 1.2rem 3rem; font-size: 1.6rem; }
       .contact__form-container { padding: 3rem; }
     }
+
+    /* Banner Styles */
+    .banner {
+      font-family: 'Tajawal', Arial, sans-serif;
+      background: linear-gradient(90deg, var(--primary-color), #a51e1e);
+      color: var(--secondary-color);
+      padding: 12px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid var(--accent-color);
+      transform: translateY(0);
+      transition: transform 0.5s ease-out, opacity 0.3s ease;
+      opacity: 1;
+    }
+    
+    .banner.hidden {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .banner-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+      max-width: 1400px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .banner-text {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .banner-icon {
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+    
+    .banner-message {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+    
+    .banner-highlight {
+      color: var(--accent-color);
+      font-weight: 800;
+      display: inline-block;
+    }
+    
+    .banner-close {
+      background: none;
+      border: none;
+      color: var(--secondary-color);
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      padding: 5px;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .banner-close:hover {
+      transform: scale(1.1);
+      color: var(--accent-color);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    
+    @media (max-width: 992px) {
+      .banner-message { font-size: 0.95rem; }
+      .banner-icon { font-size: 1.3rem; }
+    }
+    
+    @media (max-width: 768px) {
+      .banner { padding: 10px 0; }
+      .banner-content { flex-direction: row; justify-content: space-between; gap: 5px; }
+      .banner-text { gap: 8px; min-width: auto; }
+      .banner-message { font-size: 0.9rem; line-height: 1.4; }
+      .banner-highlight { display: inline; }
+    }
+    
+    @media (max-width: 576px) {
+      body { padding-top: 60px; }
+      .banner-message { font-size: 0.85rem; }
+      .banner-icon { font-size: 1.1rem; }
+      .banner-close { font-size: 1.1rem; width: 28px; height: 28px; }
+    }
+    
+    @media (max-width: 400px) {
+      .banner-message { font-size: 0.8rem; }
+      .banner-text { gap: 6px; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Banner -->
+  <div class="banner" id="denmarkBanner">
+    <div class="banner-content">
+      <div class="banner-text">
+        <i class="fas fa-hand-paper banner-icon"></i>
+        <p class="banner-message">
+          <span class="banner-highlight">💔 من الفاشر إلى غزة</span>، طفولة تُدفن تحت الركام، وأحلام تُحاصر بالنار... وجع مشترك، وعدو واحد، وصمود لا ينكسر. 🕊️🛑🧱
+        </p>
+      </div>
+      <button class="banner-close" id="closeBanner" aria-label="إغلاق الشريط">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
   <!-- Header & Navbar -->
   <header class="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
@@ -1229,9 +1373,35 @@
       }
     }
 
-    // باقي السكريبتات تبقى كما هي
-    // ...
-  </script>
+    // Banner functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const banner = document.getElementById('denmarkBanner');
+      const closeBanner = document.getElementById('closeBanner');
 
+      // Close banner
+      closeBanner.addEventListener('click', function() {
+        banner.classList.add('hidden');
+        setTimeout(() => {
+          banner.style.display = 'none';
+          document.body.style.paddingTop = '0';
+        }, 500); // Matches transition duration
+        localStorage.setItem('hideDenmarkBanner', 'true');
+      });
+
+      // Update padding for small screens
+      function updateBannerPadding() {
+        if (localStorage.getItem('hideDenmarkBanner') === 'true') return;
+        if (window.innerWidth < 768) {
+          banner.style.padding = '8px 0';
+        } else {
+          banner.style.padding = '12px 0';
+        }
+      }
+
+      window.addEventListener('resize', updateBannerPadding);
+      updateBannerPadding(); // Initial run
+    });
+  </script>
 </body>
 </html>
+git push origin main
