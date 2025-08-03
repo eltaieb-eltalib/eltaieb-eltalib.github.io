@@ -1,1 +1,1880 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عمر منصور | مهندس آليات ثقيلة ومختص في الكهرباء العامة</title>
+  <meta name="description" content="عمر منصور - مهندس آليات ثقيلة ومختص في الكهرباء العامة، تقديم خدمات متكاملة في تشغيل وصيانة المعدات، التركيبات الكهربائية، والخدمات اللوجستية">
+  <meta name="keywords" content="مهندس آليات ثقيلة, كهرباء عامة, حفارات, معدات فولفو, تركيب كاميرات, كهرباء منازل, محل الهرم للغاز">
+  <meta name="contact" content="واتساب: +249XXXXXXXXX, البريد الإلكتروني: info@example.com">
 
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --primary-dark: #1a252f;
+      --secondary-color: #e67e22;
+      --accent-color: #3498db;
+      --light-color: #f8f9fa;
+      --dark-color: #2c3e50;
+      --text-dark: #333;
+      --text-light: #f8f9fa;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+      --border-radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background-color: #f9f9f9;
+      direction: rtl;
+      text-align: right;
+      overflow-x: hidden;
+    }
+
+    .main-container {
+      max-width: 120rem;
+      margin: auto;
+      width: 92%;
+      padding: 0 1.5rem;
+    }
+
+    /* Header Styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      background-color: rgba(0, 0, 0, 0.9);
+      transition: all 0.3s ease;
+      padding: 1.5rem 0;
+      backdrop-filter: blur(10px);
+    }
+    
+    .navbar.scrolled {
+      background-color: rgba(0, 0, 0, 0.95);
+      padding: 1rem 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.8rem;
+      transition: var(--transition);
+    }
+    
+    .navbar-brand:hover {
+      color: var(--secondary-color);
+    }
+    
+    .navbar-brand img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin-left: 1rem;
+      border: 2px solid var(--secondary-color);
+      object-fit: cover;
+    }
+    
+    .navbar-toggler {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2.5rem;
+      cursor: pointer;
+      display: none;
+      transition: var(--transition);
+    }
+    
+    .navbar-toggler:hover {
+      color: var(--secondary-color);
+    }
+    
+    .navbar-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-item {
+      position: relative;
+      margin: 0 0.5rem;
+    }
+    
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.6rem;
+      transition: var(--transition);
+      display: block;
+      border-radius: var(--border-radius);
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--secondary-color);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 1.5rem;
+      width: 0;
+      height: 2px;
+      background-color: var(--secondary-color);
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: calc(100% - 3rem);
+    }
+    
+    .cta-btn {
+      background-color: var(--secondary-color);
+      color: white;
+      border-radius: 3rem;
+      padding: 1rem 2rem;
+      margin-right: 1rem;
+      transition: var(--transition);
+      font-weight: 700;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .cta-btn:hover {
+      background-color: #d35400;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Mobile styles */
+    @media (max-width: 992px) {
+      .navbar-toggler {
+        display: block;
+      }
+      
+      .navbar-menu {
+        position: fixed;
+        top: 7rem;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 7rem);
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        transition: all 0.5s ease;
+        backdrop-filter: blur(10px);
+      }
+      
+      .navbar-menu.active {
+        right: 0;
+      }
+      
+      .nav-item {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav-link {
+        padding: 1.5rem;
+      }
+      
+      .nav-link::after {
+        right: 50%;
+        transform: translateX(50%);
+      }
+      
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 50%;
+      }
+    }
+
+    /* Hero Section */
+    .home-hero {
+      color: white;
+    
+                  background-size: cover;
+                  background-image: url('omer.png');
+                  background-position: center;
+
+      height: 100vh;
+      min-height: 80rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center ;
+      padding: 0 2rem;
+    }
+
+    .home-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 15, 15, 0.5);
+    }
+
+    .home-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 90rem;
+      width: 100%;
+    }
+
+    .heading-primary {
+      font-size: 6rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 3rem;
+      font-weight: 900;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      line-height: 1.2;
+    }
+
+    .home-hero__info {
+      font-size: 2.2rem;
+      margin: 3rem auto;
+      max-width: 80rem;
+      line-height: 1.7;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .typing-text {
+      color: var(--secondary-color);
+      font-weight: 700;
+      min-height: 3.5rem;
+      display: inline-block;
+    }
+
+    .home-hero__cta {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-weight: 700;
+      border-radius: 3rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn--bg {
+      padding: 1.5rem 3.5rem;
+      font-size: 1.8rem;
+    }
+
+    .btn--theme {
+      background: var(--secondary-color);
+      color: white;
+    }
+
+    .btn--theme:hover {
+      background: #d35400;
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn--theme-inv {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn--theme-inv:hover {
+      background: white;
+      color: var(--primary-color);
+      transform: translateY(-5px);
+    }
+
+    /* Sections Common Styles */
+    .sec-pad {
+      padding: 12rem 0;
+    }
+
+    .heading-sec__main {
+      display: block;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+      font-weight: 900;
+      color: var(--primary-color);
+      line-height: 1.2;
+    }
+
+    .heading-sec__main::after {
+      content: '';
+      position: absolute;
+      top: calc(100% + 1.5rem);
+      height: 5px;
+      width: 8rem;
+      background: var(--secondary-color);
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+    }
+
+    .heading-sec__sub {
+      display: block;
+      text-align: center;
+      color: #777;
+      font-size: 2rem;
+      font-weight: 500;
+      max-width: 80rem;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    /* About Section */
+    .about {
+      background: white;
+    }
+
+    .about__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8rem;
+      margin-top: 6rem;
+    }
+
+    .about__content-main {
+      padding: 2rem;
+    }
+
+    .about__content-title {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      color: var(--primary-color);
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .about__content-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 6rem;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+
+    .about__content-details-para {
+      font-size: 1.8rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .about__content-details-para--hl {
+      font-weight: 700;
+      color: var(--secondary-color);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skills__skill {
+      padding: 1.5rem 2rem;
+      background: var(--light-color);
+      border-radius: var(--border-radius);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #555;
+      display: flex;
+      align-items: center;
+      transition: var(--transition);
+      border-right: 4px solid var(--secondary-color);
+      box-shadow: var(--shadow);
+    }
+
+    .skills__skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      background: white;
+    }
+
+    .skills__skill i {
+      margin-left: 1rem;
+      color: var(--secondary-color);
+      font-size: 1.8rem;
+    }
+
+    /* Services Section */
+    .services {
+      background: var(--light-color);
+    }
+
+    .services__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+      margin-top: 6rem;
+    }
+
+    .services__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5rem;
+      align-items: center;
+      background: white;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .services__row:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .services__row-img-cont {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .services__row-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .services__row:hover .services__row-img {
+      transform: scale(1.05);
+    }
+
+    .services__row-content {
+      padding: 4rem;
+    }
+
+    .services__row-content-title {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .services__row-content-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 6rem;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+
+    .services__row-content-desc {
+      font-size: 1.8rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      background: white;
+      padding: 8rem 0;
+    }
+
+    .testimonials .heading-sec__main {
+      margin-bottom: 5rem;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      padding: 3rem 0;
+    }
+
+    .swiper-slide {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 3rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .swiper-slide:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial__client {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial__client-img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--secondary-color);
+      margin-left: 2rem;
+    }
+
+    .testimonial__client-info h4 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial__client-info p {
+      font-size: 1.4rem;
+      color: #777;
+    }
+
+    .testimonial__text {
+      font-size: 1.6rem;
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .testimonial__rating {
+      color: var(--secondary-color);
+      font-size: 1.8rem;
+    }
+
+    .swiper-pagination-bullet {
+      width: 1.2rem;
+      height: 1.2rem;
+      background: #ddd;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--secondary-color);
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      background: white;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+      gap: 3rem;
+      margin-top: 6rem;
+    }
+
+    .portfolio-item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      height: 25rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .portfolio-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(44, 62, 80, 0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: var(--transition);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-item:hover .portfolio-img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-overlay h3 {
+      color: white;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .portfolio-overlay p {
+      color: #ddd;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .portfolio-btn {
+      background: var(--secondary-color);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 3rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .portfolio-btn:hover {
+      background: white;
+      color: var(--primary-color);
+    }
+
+    /* Stats Section */
+    .stats {
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                  url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      padding: 8rem 0;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .stats::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .stats-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      gap: 3rem;
+      margin-top: 6rem;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      backdrop-filter: blur(5px);
+      transition: var(--transition);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-10px);
+      background: rgba(230, 126, 34, 0.2);
+    }
+
+    .stat-number {
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+
+    .stat-text {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: var(--light-color);
+    }
+
+    .contact .heading-sec__main {
+      color: var(--primary-color);
+    }
+
+    .contact .heading-sec__sub {
+      color: #777;
+    }
+
+    .contact__form-container {
+      background: white;
+      padding: 5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin-top: 5rem;
+      transition: var(--transition);
+    }
+
+    .contact__form-container:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact__form-field {
+      margin-bottom: 3rem;
+    }
+
+    .contact__form-label {
+      color: #555;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .contact__form-input,
+    .contact__form-textarea {
+      width: 100%;
+      padding: 1.5rem 2rem;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      font-size: 1.6rem;
+      transition: var(--transition);
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    .contact__form-input:focus,
+    .contact__form-textarea:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+    }
+
+    .contact__form-textarea {
+      min-height: 15rem;
+      resize: vertical;
+    }
+
+    .contact__btn {
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: var(--secondary-color);
+      color: white;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .contact__btn:hover {
+      background: #d35400;
+      transform: translateY(-3px);
+    }
+
+    .contact-info {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+      gap: 3rem;
+    }
+
+    .contact-info__item {
+      background: white;
+      padding: 3rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .contact-info__item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info__icon {
+      width: 6rem;
+      height: 6rem;
+      background: rgba(230, 126, 34, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--secondary-color);
+      margin: 0 auto 2rem;
+    }
+
+    .contact-info__title {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .contact-info__text {
+      font-size: 1.6rem;
+      color: #555;
+    }
+
+    .contact-info__link {
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-info__link:hover {
+      color: #d35400;
+      text-decoration: underline;
+    }
+
+    /* Banner Styles */
+    .promo-banner {
+      background: linear-gradient(90deg, var(--secondary-color), #d35400);
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .promo-banner__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      animation: slideText 20s linear infinite;
+    }
+
+    .promo-banner__icon {
+      font-size: 2rem;
+      color: white;
+      animation: pulse 2s infinite;
+    }
+
+    .promo-banner__text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .promo-banner__highlight {
+      color: var(--primary-color);
+      background: white;
+      padding: 0.2rem 1rem;
+      border-radius: 3rem;
+      margin: 0 1rem;
+      font-weight: 800;
+    }
+
+    .promo-banner__close {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .promo-banner__close:hover {
+      color: var(--primary-color);
+      transform: translateY(-50%) scale(1.2);
+    }
+
+    @keyframes slideText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Footer */
+    .main-footer {
+      background: var(--primary-color);
+      color: white;
+      padding-top: 8rem;
+    }
+
+    .main-footer__upper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      padding-bottom: 8rem;
+    }
+
+    .main-footer__row {
+      padding: 2rem;
+    }
+
+    .main-footer__logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .main-footer__logo img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      margin-left: 1.5rem;
+      border: 2px solid var(--secondary-color);
+    }
+
+    .main-footer__logo-text {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .main-footer__short-desc {
+      margin-top: 2rem;
+      color: #bbb;
+      font-size: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .main-footer__social-cont {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .main-footer__icon {
+      width: 5rem;
+      height: 5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      transition: var(--transition);
+    }
+
+    .main-footer__icon:hover {
+      background: var(--secondary-color);
+      transform: translateY(-5px);
+    }
+
+    .main-footer__title {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .main-footer__title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 6rem;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+
+    .main-footer__links {
+      list-style: none;
+    }
+
+    .main-footer__link-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .main-footer__link {
+      color: #bbb;
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .main-footer__link i {
+      color: var(--secondary-color);
+    }
+
+    .main-footer__link:hover {
+      color: var(--secondary-color);
+      transform: translateX(-5px);
+    }
+
+    .main-footer__lower {
+      padding: 4rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #bbb;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 3rem;
+      left: 3rem;
+      width: 5rem;
+      height: 5rem;
+      background: var(--secondary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 999;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: #d35400;
+      transform: translateY(-5px);
+    }
+
+    /* Responsive Styles */
+    @media only screen and (max-width: 75em) {
+      html { font-size: 59%; }
+      .sec-pad { padding: 10rem 0; }
+      .heading-primary { font-size: 5rem; }
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      html { font-size: 56%; }
+      .sec-pad { padding: 8rem 0; }
+      .about__content { grid-template-columns: 1fr; }
+      .services__row { grid-template-columns: 1fr; }
+      .main-footer__upper { grid-template-columns: 1fr; }
+      .contact-info { grid-template-columns: 1fr; }
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      html { font-size: 50%; }
+      .sec-pad { padding: 6rem 0; }
+      .heading-primary { font-size: 4rem; }
+      .heading-sec__main { font-size: 3.2rem; }
+      .heading-sec__sub { font-size: 1.8rem; }
+      .home-hero { min-height: auto; padding: 15rem 0; }
+      .btn--bg { padding: 1.2rem 3rem; font-size: 1.6rem; }
+      .contact__form-container { padding: 3rem; }
+      .promo-banner__text { font-size: 1.4rem; }
+      .navbar-brand span { display: none; }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.8s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Promo Banner -->
+  <div class="promo-banner" id="promoBanner">
+    <button class="promo-banner__close" id="closeBanner">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="promo-banner__content">
+      <i class="fas fa-tools promo-banner__icon"></i>
+      <div class="promo-banner__text">
+        خصم 20% على خدمات الصيانة هذا الأسبوع <span class="promo-banner__highlight">عرض محدود</span> تواصل الآن واحصل على استشارة مجانية <span class="promo-banner__highlight">واتساب: +249XXXXXXXXX</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-container main-container">
+      <a href="#home" class="navbar-brand">
+        <img src="omer.png" alt="عمر منصور">
+        <span>عمر منصور</span>
+      </a>
+      
+      <button class="navbar-toggler" id="navbarToggler">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="navbar-menu" id="navbarMenu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">نبذة عني</a>
+        </li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link">الخدمات</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-link">أعمالي</a>
+        </li>
+        <li class="nav-item">
+          <a href="#testimonials" class="nav-link">آراء العملاء</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">تواصل معي</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="cta-btn">
+            <i class="fas fa-phone-alt"></i> اتصل الآن
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="home-hero">
+    <div class="home-hero__content animate__animated animate__fadeIn">
+      <h1 class="heading-primary animate delay-1">عمر منصور</h1>
+      <p class="home-hero__info animate delay-2">
+        <span class="typing-text"></span>
+      </p>
+      <div class="home-hero__cta animate delay-3">
+        <a href="#contact" class="btn btn--bg btn--theme">
+          <i class="fas fa-paper-plane"></i> تواصل معي
+        </a>
+        <a href="#services" class="btn btn--bg btn--theme-inv">
+          <i class="fas fa-tools"></i> استكشف الخدمات
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about sec-pad">
+    <div class="main-container">
+      <h2 class="heading-sec__main animate">نبذة عني</h2>
+      <p class="heading-sec__sub animate delay-1">
+        مهندس آليات ثقيلة ومختص في الكهرباء العامة بخبرة واسعة في السودان
+      </p>
+      <div class="about__content">
+        <div class="about__content-main animate delay-2">
+          <h3 class="about__content-title">من أنا؟</h3>
+          <div class="about__content-details">
+            <p class="about__content-details-para">
+              أنا <span class="about__content-details-para--hl">عمر منصور</span>، مهندس آليات ثقيلة (حفارات، قريدرات، ومعدات فولفو) ولدي خبرة واسعة في ميادين متعددة. عملت في شركات الطرق والجسور بالسودان في مجال تشغيل وصيانة الآليات الثقيلة.
+            </p>
+            <p class="about__content-details-para">
+              كما أنني متخصص في تركيب الكاميرات الأمنية وبرمجتها، تركيب الشبكات، توصيل المحركات، وتنفيذ مشاريع كهربائية للمنازل والشركات. أدير حاليًا نشاطًا تجاريًا لبيع أنابيب غاز الطبخ عبر "محل الهرم للغاز".
+            </p>
+            <a href="#contact" class="btn btn--med btn--theme">
+              <i class="fas fa-user-tie"></i> المزيد عني
+            </a>
+          </div>
+        </div>
+        <div class="about__content-skills animate delay-3">
+          <h3 class="about__content-title">خبراتي</h3>
+          <div class="skills">
+            <div class="skills__skill"><i class="fas fa-truck-monster"></i> تشغيل الآليات الثقيلة</div>
+            <div class="skills__skill"><i class="fas fa-tools"></i> صيانة المعدات</div>
+            <div class="skills__skill"><i class="fas fa-bolt"></i> التركيبات الكهربائية</div>
+            <div class="skills__skill"><i class="fas fa-video"></i> كاميرات المراقبة</div>
+            <div class="skills__skill"><i class="fas fa-network-wired"></i> تركيب الشبكات</div>
+            <div class="skills__skill"><i class="fas fa-fire"></i> تجارة أنابيب الغاز</div>
+            <div class="skills__skill"><i class="fas fa-road"></i> أعمال الطرق والجسور</div>
+            <div class="skills__skill"><i class="fas fa-cogs"></i> توصيل المحركات</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services sec-pad">
+    <div class="main-container">
+      <h2 class="heading-sec__main animate">الخدمات</h2>
+      <p class="heading-sec__sub animate delay-1">
+        أقدم مجموعة متكاملة من الخدمات المهنية في مجالات تخصصي
+      </p>
+      <div class="services__content">
+        <div class="services__row animate delay-2">
+          <div class="services__row-img-cont">
+            <img src="https://images.unsplash.com/photo-1620746164549-b9dddeb9a3f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="الآليات الثقيلة" 
+                 class="services__row-img" 
+                 loading="lazy">
+          </div>
+          <div class="services__row-content">
+            <h3 class="services__row-content-title">الآليات الثقيلة</h3>
+            <p class="services__row-content-desc">
+              تشغيل وصيانة الحفارات، القريدرات، ومعدات فولفو مع خبرة في شركات الطرق والجسور بالسودان. تقديم خدمات متكاملة تشمل الفحص الدوري، الإصلاحات، والصيانة الوقائية لضمان كفاءة المعدات.
+            </p>
+            <a href="#contact" class="btn btn--med btn--theme">
+              <i class="fas fa-envelope"></i> اطلب الخدمة
+            </a>
+          </div>
+        </div>
+        <div class="services__row animate delay-3">
+          <div class="services__row-content">
+            <h3 class="services__row-content-title">الكهرباء العامة</h3>
+            <p class="services__row-content-desc">
+              تركيب كاميرات أمنية وبرمجتها، تركيب الشبكات، توصيل المحركات، وتنفيذ مشاريع كهربائية للمنازل والشركات. تقديم حلول متكاملة بدءًا من التصميم وحتى التنفيذ مع ضمان الجودة والسلامة.
+            </p>
+            <a href="#contact" class="btn btn--med btn--theme">
+              <i class="fas fa-envelope"></i> اطلب الخدمة
+            </a>
+          </div>
+          <div class="services__row-img-cont">
+            <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="الكهرباء العامة" 
+                 class="services__row-img" 
+                 loading="lazy">
+          </div>
+        </div>
+        <div class="services__row animate delay-4">
+          <div class="services__row-img-cont">
+            <img src="https://images.unsplash.com/photo-1606223850107-323b613def44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="تجارة أنابيب الغاز" 
+                 class="services__row-img" 
+                 loading="lazy">
+          </div>
+          <div class="services__row-content">
+            <h3 class="services__row-content-title">تجارة أنابيب الغاز</h3>
+            <p class="services__row-content-desc">
+              إدارة وتشغيل "محل الهرم للغاز" لبيع أنابيب غاز الطبخ بجودة عالية وخدمة مميزة. نقدم منتجات موثوقة مع ضمان الجودة والسلامة، وتوصيل سريع لضمان راحة العملاء.
+            </p>
+            <a href="#contact" class="btn btn--med btn--theme">
+              <i class="fas fa-envelope"></i> اطلب الخدمة
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="main-container stats-container">
+      <h2 class="heading-sec__main" style="color: white;">إنجازاتي</h2>
+      <p class="heading-sec__sub" style="color: #ddd;">
+        سنوات من الخبرة والثقة التي اكتسبتها من عملائي
+      </p>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-text">سنة خبرة</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="320">0</div>
+          <div class="stat-text">مشروع منجز</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="98">0</div>
+          <div class="stat-text">عميل راضٍ</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-text">جائزة وتكريم</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio sec-pad">
+    <div class="main-container">
+      <h2 class="heading-sec__main animate">معرض الأعمال</h2>
+      <p class="heading-sec__sub animate delay-1">
+        بعض المشاريع التي قمت بتنفيذها في مختلف مجالات تخصصي
+      </p>
+      <div class="portfolio-grid">
+        <div class="portfolio-item animate delay-2">
+          <img src="https://images.unsplash.com/photo-1620746164549-b9dddeb9a3f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+               alt="مشروع آليات ثقيلة" 
+               class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>مشروع آليات ثقيلة</h3>
+            <p>تشغيل وصيانة معدات فولفو لشركة طرق وجسور</p>
+            <a href="#" class="portfolio-btn">عرض التفاصيل</a>
+          </div>
+        </div>
+        <div class="portfolio-item animate delay-3">
+          <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+               alt="تركيب كهرباء" 
+               class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>تركيب كهرباء</h3>
+            <p>تنفيذ مشروع كهرباء لمنزل بمساحة 300م²</p>
+            <a href="#" class="portfolio-btn">عرض التفاصيل</a>
+          </div>
+        </div>
+        <div class="portfolio-item animate delay-4">
+          <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+               alt="كاميرات أمنية" 
+               class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>كاميرات أمنية</h3>
+            <p>تركيب نظام مراقبة متكامل لشركة تجارية</p>
+            <a href="#" class="portfolio-btn">عرض التفاصيل</a>
+          </div>
+        </div>
+        <div class="portfolio-item animate delay-2">
+          <img src="https://images.unsplash.com/photo-1606223850107-323b613def44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+               alt="محل الهرم للغاز" 
+               class="portfolio-img">
+          <div class="portfolio-overlay">
+            <h3>محل الهرم للغاز</h3>
+            <p>إدارة وتشغيل محل لبيع أنابيب غاز الطبخ</p>
+            <a href="#" class="portfolio-btn">عرض التفاصيل</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials sec-pad">
+    <div class="main-container">
+      <h2 class="heading-sec__main animate">آراء العملاء</h2>
+      <p class="heading-sec__sub animate delay-1">
+        ما يقوله عملائي عن جودة خدماتي
+      </p>
+      
+      <div class="swiper mySwiper animate delay-2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial__client">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="عميل" class="testimonial__client-img">
+              <div class="testimonial__client-info">
+                <h4>أحمد محمد</h4>
+                <p>مدير شركة البناء الحديث</p>
+              </div>
+            </div>
+            <div class="testimonial__text">
+              "تعاملت مع المهندس عمر في مشروع صيانة معداتنا الثقيلة وكان أداؤه ممتازًا. الدقة في العمل والالتزام بالمواعيد من أهم ما يميزه. أنصح الجميع بالتعامل معه."
+            </div>
+            <div class="testimonial__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__client">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="عميل" class="testimonial__client-img">
+              <div class="testimonial__client-info">
+                <h4>سارة عبد الله</h4>
+                <p>مالكة منزل خاص</p>
+              </div>
+            </div>
+            <div class="testimonial__text">
+              "المهندس عمر قام بتركيب نظام كهرباء منزلي بالكامل وكان العمل دقيقًا وأنيقًا. كما قام بتركيب كاميرات مراقبة باحترافية كبيرة. أشكر جهوده وأوصي به."
+            </div>
+            <div class="testimonial__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__client">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="عميل" class="testimonial__client-img">
+              <div class="testimonial__client-info">
+                <h4>خالد عثمان</h4>
+                <p>مدير مطعم</p>
+              </div>
+            </div>
+            <div class="testimonial__text">
+              "تعاملت مع محل الهرم للغاز لتوريد أنابيب الغاز لمطعمي، الخدمة سريعة والمنتجات ذات جودة عالية. الأسعار مناسبة والمواعيد محترمة. شكرًا لكم."
+            </div>
+            <div class="testimonial__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial__client">
+              <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="عميل" class="testimonial__client-img">
+              <div class="testimonial__client-info">
+                <h4>محمد حسن</h4>
+                <p>مدير مشروع</p>
+              </div>
+            </div>
+            <div class="testimonial__text">
+              "المهندس عمر محترف في تشغيل الآليات الثقيلة. قام بتدريب فريقنا على تشغيل الحفارات الجديدة بكفاءة عالية. نعتبره شريكًا موثوقًا به في مشاريعنا."
+            </div>
+            <div class="testimonial__rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact sec-pad">
+    <div class="main-container">
+      <h2 class="heading-sec__main animate">تواصل معي</h2>
+      <p class="heading-sec__sub animate delay-1">
+        يمكنك التواصل معي عبر النموذج التالي أو عبر وسائل التواصل المباشرة
+      </p>
+      <div class="contact__form-container animate delay-2">
+        <form class="contact__form">
+          <div class="contact__form-field">
+            <label for="name" class="contact__form-label">الاسم الكامل</label>
+            <input type="text" class="contact__form-input" id="name" required>
+          </div>
+          <div class="contact__form-field">
+            <label for="email" class="contact__form-label">البريد الإلكتروني</label>
+            <input type="email" class="contact__form-input" id="email" required>
+          </div>
+          <div class="contact__form-field">
+            <label for="phone" class="contact__form-label">رقم الهاتف</label>
+            <input type="tel" class="contact__form-input" id="phone">
+          </div>
+          <div class="contact__form-field">
+            <label for="service" class="contact__form-label">الخدمة المطلوبة</label>
+            <select class="contact__form-input" id="service" required>
+              <option value="">اختر الخدمة</option>
+              <option value="heavy-equipment">الآليات الثقيلة</option>
+              <option value="electricity">الكهرباء العامة</option>
+              <option value="gas">تجارة أنابيب الغاز</option>
+              <option value="other">خدمات أخرى</option>
+            </select>
+          </div>
+          <div class="contact__form-field">
+            <label for="message" class="contact__form-label">الرسالة</label>
+            <textarea class="contact__form-textarea" id="message" required></textarea>
+          </div>
+          <button type="submit" class="contact__btn">
+            <i class="fas fa-paper-plane"></i> إرسال الرسالة
+          </button>
+        </form>
+      </div>
+      
+      <div class="contact-info">
+        <div class="contact-info__item animate delay-3">
+          <div class="contact-info__icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 class="contact-info__title">العنوان</h3>
+          <p class="contact-info__text">الخرطوم، السودان</p>
+        </div>
+        <div class="contact-info__item animate delay-4">
+          <div class="contact-info__icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3 class="contact-info__title">الهاتف</h3>
+          <p class="contact-info__text">
+            <a href="tel:+249XXXXXXXXX" class="contact-info__link">+249XXXXXXXXX</a>
+          </p>
+        </div>
+        <div class="contact-info__item animate delay-2">
+          <div class="contact-info__icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3 class="contact-info__title">البريد الإلكتروني</h3>
+          <p class="contact-info__text">
+            <a href="mailto:info@example.com" class="contact-info__link">info@example.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row">
+          <div class="main-footer__logo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="عمر منصور">
+            <span class="main-footer__logo-text">عمر منصور</span>
+          </div>
+          <p class="main-footer__short-desc">
+            مهندس آليات ثقيلة ومختص في الكهرباء العامة بخبرة واسعة في السودان. تقديم خدمات متكاملة في تشغيل وصيانة المعدات، التركيبات الكهربائية، والخدمات اللوجستية.
+          </p>
+          <div class="main-footer__social-cont">
+            <a href="#" class="main-footer__icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="main-footer__icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="main-footer__icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="main-footer__icon"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="main-footer__row">
+          <h3 class="main-footer__title">روابط سريعة</h3>
+          <ul class="main-footer__links">
+            <li class="main-footer__link-item">
+              <a href="#home" class="main-footer__link">
+                <i class="fas fa-chevron-left"></i> الرئيسية
+              </a>
+            </li>
+            <li class="main-footer__link-item">
+              <a href="#about" class="main-footer__link">
+                <i class="fas fa-chevron-left"></i> نبذة عني
+              </a>
+            </li>
+            <li class="main-footer__link-item">
+              <a href="#services" class="main-footer__link">
+                <i class="fas fa-chevron-left"></i> الخدمات
+              </a>
+            </li>
+            <li class="main-footer__link-item">
+              <a href="#portfolio" class="main-footer__link">
+                <i class="fas fa-chevron-left"></i> معرض الأعمال
+              </a>
+            </li>
+            <li class="main-footer__link-item">
+              <a href="#contact" class="main-footer__link">
+                <i class="fas fa-chevron-left"></i> تواصل معي
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-footer__lower">
+        <p>
+          © حقوق النشر <span id="year"></span>. جميع الحقوق محفوظة لـ <span class="main-footer__link">عمر منصور</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    // Navbar functionality
+    const navbar = document.getElementById('navbar');
+    const navbarToggler = document.getElementById('navbarToggler');
+    const navbarMenu = document.getElementById('navbarMenu');
+    
+    // Toggle mobile menu
+    navbarToggler.addEventListener('click', function() {
+      navbarMenu.classList.toggle('active');
+      this.innerHTML = navbarMenu.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navbarMenu.classList.remove('active');
+        navbarToggler.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      
+      // Back to top button
+      if (window.scrollY > 300) {
+        document.getElementById('backToTop').classList.add('active');
+      } else {
+        document.getElementById('backToTop').classList.remove('active');
+      }
+    });
+    
+    // Back to top button
+    document.getElementById('backToTop').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Typing animation
+    const typed = new Typed('.typing-text', {
+      strings: [
+        'مهندس آليات ثقيلة',
+        'متخصص في الكهرباء العامة',
+        'خبرة في تركيب الكاميرات الأمنية',
+        'مدير محل الهرم للغاز'
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Banner functionality
+    const promoBanner = document.getElementById('promoBanner');
+    const closeBanner = document.getElementById('closeBanner');
+
+    closeBanner.addEventListener('click', function() {
+      promoBanner.style.display = 'none';
+      localStorage.setItem('hideBanner', 'true');
+    });
+
+    // Check if banner should be hidden
+    if (localStorage.getItem('hideBanner') === 'true') {
+      promoBanner.style.display = 'none';
+    }
+
+    // Form submission
+    const contactForm = document.querySelector('.contact__form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show success message
+        const submitBtn = this.querySelector('.contact__btn');
+        submitBtn.innerHTML = '<i class="fas fa-check"></i> تم الإرسال بنجاح';
+        submitBtn.style.backgroundColor = '#2ecc71';
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          this.reset();
+          submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+          submitBtn.style.backgroundColor = 'var(--secondary-color)';
+        }, 3000);
+      });
+    }
+
+    // Testimonials slider
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        }
+      }
+    });
+
+    // Stats counter animation
+    function animateStats() {
+      const statItems = document.querySelectorAll('.stat-item');
+      
+      statItems.forEach(item => {
+        const numberElement = item.querySelector('.stat-number');
+        const target = parseInt(numberElement.getAttribute('data-count'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            clearInterval(timer);
+            current = target;
+          }
+          numberElement.textContent = Math.floor(current);
+        }, 16);
+      });
+    }
+    
+    // Initialize stats animation when scrolled to
+    function checkStatsVisibility() {
+      const statsSection = document.querySelector('.stats');
+      if (statsSection) {
+        const sectionTop = statsSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight - 100) {
+          animateStats();
+          window.removeEventListener('scroll', checkStatsVisibility);
+        }
+      }
+    }
+    
+    window.addEventListener('scroll', checkStatsVisibility);
+    
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Initialize animations on scroll
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    }
+    
+    // Initialize elements with opacity 0 for animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('.animate');
+      
+      animateElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(50px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      });
+      
+      // Show hero section immediately
+      document.querySelector('.home-hero').style.opacity = '1';
+      
+      // Trigger scroll event to check initial positions
+      window.dispatchEvent(new Event('scroll'));
+    });
+    
+    window.addEventListener('scroll', animateOnScroll);
+  </script>
+</body>
+</html>
