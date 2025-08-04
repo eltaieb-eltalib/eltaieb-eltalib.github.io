@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صديق الفاتح | مشغل معدات الحفر والتعدين</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            min-width: 150px;
+        }
+        
+        .stat-item h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        
+        .stat-item p {
+            color: var(--light);
+            font-size: 0.9rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a i {
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .hero h1 span {
+            color: var(--secondary);
+        }
+        
+        .hero p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1rem;
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 5rem 0;
+            background-color: #f5f7fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-card h3 i {
+            margin-left: 0.8rem;
+            color: var(--secondary);
+        }
+        
+        .skill-card p {
+            color: var(--text-light);
+        }
+        
+        .skill-level {
+            margin-top: 1rem;
+            height: 6px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .level-bar {
+            height: 100%;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            border-radius: 3px;
+        }
+        
+        .expert { width: 95%; }
+        .advanced { width: 80%; }
+        
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .about p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .personal-qualities {
+            margin-top: 2rem;
+        }
+        
+        .qualities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .quality-item {
+            display: flex;
+            align-items: center;
+            background-color: #f5f7fa;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+        }
+        
+        .quality-item i {
+            margin-left: 0.8rem;
+            color: var(--secondary);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background-color: #f5f7fa;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-methods {
+            margin-top: 2rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-method i {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+        
+        .contact-method h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--primary);
+        }
+        
+        .contact-method p {
+            color: var(--text-light);
+        }
+        
+        .availability {
+            margin-top: 2rem;
+        }
+        
+        .availability-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.8rem 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .availability-item i {
+            margin-left: 1rem;
+            color: var(--secondary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column {
+            flex: 1;
+            padding: 0 1rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .footer-column p {
+            margin-bottom: 1rem;
+            color: #bdc3c7;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content, .about-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero-image, .about-image {
+                order: -1;
+                margin-bottom: 2rem;
+            }
+            
+            .footer-content {
+                flex-wrap: wrap;
+            }
+            
+            .footer-column {
+                flex: 0 0 50%;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 1rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-item {
+                width: 100%;
+                max-width: 250px;
+                margin-bottom: 1rem;
+            }
+            
+            .footer-column {
+                flex: 0 0 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .hero h1, .about h2, .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">صديق الفاتح</h1>
+            <p class="tagline">مشغل معدات الحفر والتعدين</p>
+            <p>خبرة متخصصة في تشغيل معدات الحفر والتعدين لأكثر من ست سنوات في المواقع الميدانية</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>6+</h3>
+                    <p>سنوات خبرة</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>الالتزام بالسلامة</p>
+                </div>
+                <div class="stat-item">
+                    <h3><i class="fas fa-phone"></i></h3>
+                    <p>+249119722727</p>
+                </div>
+                <div class="stat-item">
+                    <h3><i class="fas fa-envelope"></i></h3>
+                    <p>sidqsidq84@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">صديق الفاتح</div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#skills"><i class="fas fa-cogs"></i> المهارات</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> عني</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> تواصل</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>مشغل معدات الحفر <span>والتعدين</span></h1>
+                    <p>خبرة متخصصة في تشغيل معدات الحفر والتعدين لأكثر من ست سنوات في المواقع الميدانية. ملتزم بأعلى معايير السلامة والجودة.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>اتصال مباشر</h4>
+                                <p>+249119722727</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p>sidqsidq84@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>واتساب</h4>
+                                <p>+249992126233</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="معدات الحفر">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>المهارات والخبرات</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-tools"></i> المهارات التقنية</h3>
+                    <p>مهارات تقنية متقدمة ومتخصصة في مجال تشغيل معدات الحفر والتعدين</p>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-hammer"></i> تشغيل مكنات التخريم D3</h3>
+                    <p>تشغيل مكنات التخريم بكفاءة عالية في مختلف التضاريس</p>
+                    <div class="skill-level">
+                        <div class="level-bar expert"></div>
+                    </div>
+                    <span>خبير</span>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-truck"></i> قاطر مقطور أطلس ككو</h3>
+                    <p>تشغيل وصيانة معدات Atlas Copco المتخصصة</p>
+                    <div class="skill-level">
+                        <div class="level-bar advanced"></div>
+                    </div>
+                    <span>متقدم</span>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-digging"></i> حفر آبار التفجير</h3>
+                    <p>تنفيذ أعمال حفر آبار التفجير بأنواعها المختلفة</p>
+                    <div class="skill-level">
+                        <div class="level-bar expert"></div>
+                    </div>
+                    <span>خبير</span>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-search"></i> الأبحاث الجيولوجية</h3>
+                    <p>تنفيذ أعمال الأبحاث الجيولوجية والتعدينية (إسمنتي - جبص - بهياء)</p>
+                    <div class="skill-level">
+                        <div class="level-bar advanced"></div>
+                    </div>
+                    <span>متقدم</span>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-tractor"></i> تشغيل البوكسي</h3>
+                    <p>قيادة وتشغيل البوكسي في مواقع العمل الوعرة</p>
+                    <div class="skill-level">
+                        <div class="level-bar advanced"></div>
+                    </div>
+                    <span>متقدم</span>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-wrench"></i> الصيانة الأولية</h3>
+                    <p>صيانة المعدات الثقيلة والتعامل مع الأعطال الميدانية</p>
+                    <div class="skill-level">
+                        <div class="level-bar advanced"></div>
+                    </div>
+                    <span>متقدم</span>
+                </div>
+                
+                <div class="skill-card">
+                    <h3><i class="fas fa-shield-alt"></i> مهارات السلامة والجودة</h3>
+                    <p>الالتزام الصارم بإجراءات السلامة في مواقع العمل</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>الخبرة والصفات الشخصية</h2>
+                    <p>أنا صديق الفاتح، مشغل معدات حفر وتعدين محترف مع أكثر من 6 سنوات من الخبرة الميدانية في مختلف المواقع والتضاريس.</p>
+                    <p>أمتلك مهارات تقنية متقدمة في تشغيل وصيانة مختلف أنواع معدات الحفر والتعدين، مع الالتزام بأعلى معايير السلامة المهنية.</p>
+                    
+                    <div class="personal-qualities">
+                        <h3>الصفات الشخصية:</h3>
+                        <div class="qualities-list">
+                            <div class="quality-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>الانضباط والدقة في المواعيد</span>
+                            </div>
+                            <div class="quality-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>الجدية في العمل والالتزام بالمهام</span>
+                            </div>
+                            <div class="quality-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>العمل بروح الفريق وتحمل ضغط العمل</span>
+                            </div>
+                            <div class="quality-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>قراءة الخرائط الجيولوجية والتعليمات الفنية</span>
+                            </div>
+                            <div class="quality-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>العمل في بيئات تعدين مفتوحة وتضاريس صعبة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581093057305-255fed9bf5f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="صديق الفاتح">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>تواصل معي</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>مستعد للتعاون في مشاريع جديدة</h3>
+                    <p>تواصل معي لمناقشة احتياجاتك في مجال تشغيل معدات الحفر والتعدين</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>اتصال مباشر</h4>
+                                <p>+249119722727</p>
+                                <p>+249992126233</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p>sidqsidq84@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>واتساب</h4>
+                                <p>رسالة سريعة - استجابة فورية</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="availability">
+                        <h3>حالة التوفر</h3>
+                        <div class="availability-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>متاح للعمل - جاهز للبدء في مشاريع جديدة فوراً</p>
+                        </div>
+                        <div class="availability-item">
+                            <i class="fas fa-globe-africa"></i>
+                            <p>العمل الميداني - مستعد للسفر والعمل في مواقع مختلفة</p>
+                        </div>
+                        <div class="availability-item">
+                            <i class="fas fa-file-contract"></i>
+                            <p>التعاقد - مفتوح للعمل بدوام كامل أو عقود قصيرة الأمد</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>مستعد للبدء؟</h3>
+                    <p>تواصل معي الآن لمناقشة مشروعك القادم</p>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" placeholder="اسمك الكريم">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" placeholder="بريدك الإلكتروني">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" placeholder="رقم هاتفك">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" placeholder="تفاصيل مشروعك أو استفسارك"></textarea>
+                        </div>
+                        <button type="submit" class="btn">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>صديق الفاتح</h3>
+                    <p>مشغل معدات الحفر والتعدين</p>
+                    <p>خبرة متخصصة في تشغيل معدات الحفر والتعدين لأكثر من ست سنوات في المواقع الميدانية.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>معلومات مهنية</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-calendar-alt"></i> سنوات الخبرة: 6+ سنوات</li>
+                        <li><i class="fas fa-cog"></i> التخصص: معدات الحفر والتعدين</li>
+                        <li><i class="fas fa-briefcase"></i> نوع العمل: ميداني</li>
+                        <li><i class="fas fa-check-circle"></i> التوفر: متاح حالياً</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>الخدمات المتخصصة</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-check"></i> تشغيل مكنات التخريم D3</li>
+                        <li><i class="fas fa-check"></i> تشغيل قاطر مقطور أطلس ككو</li>
+                        <li><i class="fas fa-check"></i> حفر آبار التفجير</li>
+                        <li><i class="fas fa-check"></i> الأبحاث الجيولوجية والتعدينية</li>
+                        <li><i class="fas fa-check"></i> تشغيل البوكسي في المواقع الوعرة</li>
+                        <li><i class="fas fa-check"></i> الصيانة الأولية للمعدات</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>طرق التواصل</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +249119722727</li>
+                        <li><i class="fas fa-phone"></i> +249992126233</li>
+                        <li><i class="fas fa-envelope"></i> sidqsidq84@gmail.com</li>
+                        <li><i class="fab fa-whatsapp"></i> واتساب: +249992126233</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 صديق الفاتح. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
